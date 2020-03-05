@@ -1,0 +1,34 @@
+#Clown Game
+#Kohl, Cash, Erik, Carter, Alex.
+#March 4, 2020
+#________________________________
+
+from Tkinter import *
+import os, time
+
+
+#Functions
+#________________________________
+
+def closeSplashPage():
+   splashPage.destroy()
+
+#Splash Page
+#________________________________
+
+splashPage = Tk()
+splashPage.configure(background="black")
+splashPage.geometry("500x500+0+0")
+splashPage.title("Welcome and Thank You!")
+#splashPageImg=PhotoImage(file='img/???.gif')
+#splashPageImg.zoom(1, 1)  (just in case we need to resize)
+#label1=Label(splashPage, image=splashPageImg)
+#label1.place(x=0,y=0)
+splashPage.wm_attributes("-topmost", 1)
+#time.sleep(10) (I can't get the splash page to close after 10 seconds)
+#closeSplashPage()
+splashPage.mainloop()
+
+
+#
+#
