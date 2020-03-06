@@ -1,0 +1,108 @@
+#          _____
+# \    /  |     \
+#  \  /   |      |
+#   \/    |      |
+#   /\    |      |
+#  /  \   |      |
+# /    \  |_____/
+
+
+
+#Clown Game
+#Kohl, Cash, Erik, Carter, Alex.
+#March 4, 2020
+#________________________________
+
+from Tkinter import *
+import os, time
+
+
+#Functions
+#________________________________
+
+def closeSplashPage():
+   splashPage.destroy()
+      
+def startGame():
+   level1 = Tk()
+   level1.configure(background="black")
+   level1.geometry("505x505+0+0")
+   level1.title("Level 1")
+   #level1Img=PhotoImage(file='img/???.gif')
+   #level1Img.zoom(1, 1)  (just in case we need to resize)
+   #label4=Label(level1, image=level1Img)
+   #label4.place(x=0,y=0)
+   #
+   #If we need a pause button later
+   #______________________________
+   #button4 = Button(level1, text=' | | ', fg='green', bg='red', command=pause, height=1, width=5)
+   #button4.place(x=0, y=0)
+
+   
+def Exit():
+   sys.exit()
+
+def helpScreenCmd():
+   helpScreen = Tk()
+   helpScreen.configure(background="black")
+   helpScreen.geometry("505x505+0+0")
+   helpScreen.title("Help Screen")
+   #helpScreenImg=PhotoImage(file='img/???.gif')
+   #helpScreenImg.zoom(1, 1)  (just in case we need to resize)
+   #label3=Label(helpScreen, image=helpScreenImg)
+   #label3.place(x=0,y=0)
+   button5 = Button(helpScreen, text=' Main Menu ', fg='green', bg='red', command=mainMenuCmd, height=1, width=15)
+   button5.place(x=160, y=470)
+
+
+def mainMenuCmd():
+   mainMenu = Tk()
+   mainMenu.configure(background="black")
+   mainMenu.geometry("505x505+0+0")
+   mainMenu.title("Main Menu")
+   #mainMenuImg=PhotoImage(file='img/???.gif')
+   #mainMenuImg.zoom(1, 1)  (just in case we need to resize)
+   #label2=Label(mainMenu, image=mainMenuImg)
+   #label2.place(x=0,y=0)
+   button1 = Button(mainMenu, text=' Play ', fg='green', bg='red', command=startGame, height=1, width=15)
+   button1.place(x=160, y=270)
+   button2 = Button(mainMenu, text=' How To Play ', fg='green', bg='red', command=helpScreenCmd, height=1, width=15)
+   button2.place(x=160, y=300)
+   button3 = Button(mainMenu, text=' Exit ', fg='green', bg='red', command=Exit, height=1, width=15)
+   button3.place(x=160, y=330)
+   mainMenu.mainloop()
+
+
+#Splash Page
+#________________________________
+
+splashPage = Tk()
+splashPage.configure(background="black")
+splashPage.geometry("505x505+505+0")
+splashPage.title("Welcome and Thank You!")
+splashPageImg=PhotoImage(file='img/splashScreen.gif')
+splashPageImg.zoom(1, 1)  #(just in case we need to resize)
+label1=Label(splashPage, image=splashPageImg)
+label1.place(x=0,y=0)
+label0=Label(splashPage, bg="white", text="Thank you for playing our game! You can close this window now.")
+label0.place(x=40,y=410)
+label6=Label(splashPage, bg="white", text="This game was made by Kohl B, Cash F, Erik A, Carter S, and Alex D")
+label6.place(x=30,y=440)
+label7=Label(splashPage, bg="white", text="on March 4, 2020 and released March 20, 2020.")
+label7.place(x=90,y=470)
+splashPage.wm_attributes("-topmost", 1)
+#time.sleep(10) (I can't get the splash page to close after 10 seconds)
+#closeSplashPage()
+mainMenuCmd()
+splashPage.mainloop()
+
+#Notes
+#________________________________
+
+#Should we create a roadmap for how the level design in going to be?
+#Should the level end when all enemies were eliminated?
+#or should there be a end goal?
+#Time limit?
+#Score limit?
+#We need to convert Alex's clown images to gifs btw
+#Everything works too
