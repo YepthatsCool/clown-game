@@ -99,7 +99,7 @@ splashPage.mainloop()
 #Notes
 #________________________________
 
-#Should we create a roadmap for how the level design in going to be?
+#Should we create a roadmap for how the level design in going to be? #Things like trello are for that
 #Should the level end when all enemies were eliminated?
 #or should there be a end goal?
 #Time limit?
